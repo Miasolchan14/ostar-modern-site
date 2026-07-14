@@ -2112,3 +2112,48 @@ img {
     }
 
 }
+/* ========================================
+   奥斯达通信 Logo 设置
+======================================== */
+
+/* 顶部导航：只放图形 icon */
+.site-header .header-logo-icon {
+  display: block;
+  width: auto;
+  height: 64px;
+  max-width: 64px;
+  object-fit: contain;
+}
+
+/* 顶部导航容器本身不要白底 */
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+}
+
+/* 页脚：完整 Logo */
+.site-footer .footer-logo-image {
+  display: block;
+  width: auto;
+  height: 120px;
+  max-width: 200px;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 手机端 */
+@media (max-width: 600px) {
+  .site-header .header-logo-icon {
+    height: 52px;
+    max-width: 52px;
+  }
+
+  .site-footer .footer-logo-image {
+    height: 92px;
+    max-width: 155px;
+  }
+}
