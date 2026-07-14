@@ -1,0 +1,1493 @@
+/* ==================================================
+   客户案例页面专用样式
+================================================== */
+
+
+/* ==================================================
+   1. 客户案例首屏
+================================================== */
+
+.cases-hero {
+    position: relative;
+    min-height: 680px;
+    padding: 110px 0 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(23, 105, 232, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 70% 85%,
+            rgba(16, 184, 201, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f7fbff 0%,
+            #ffffff 48%,
+            #edf6ff 100%
+        );
+}
+
+.cases-hero-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(23, 105, 232, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(23, 105, 232, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 64px 64px;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black,
+            transparent 85%
+        );
+}
+
+.cases-hero::before {
+    content: "";
+
+    position: absolute;
+    top: -220px;
+    right: -180px;
+
+    width: 680px;
+    height: 680px;
+
+    border:
+        1px solid rgba(23, 105, 232, 0.12);
+
+    border-radius: 50%;
+}
+
+.cases-hero::after {
+    content: "";
+
+    position: absolute;
+    top: -120px;
+    right: -80px;
+
+    width: 480px;
+    height: 480px;
+
+    border:
+        1px solid rgba(16, 184, 201, 0.15);
+
+    border-radius: 50%;
+}
+
+.cases-hero-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+
+/* 面包屑 */
+
+.cases-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 26px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.cases-breadcrumb a {
+    transition: color 0.2s ease;
+}
+
+.cases-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.cases-breadcrumb strong {
+    color: var(--text-dark);
+}
+
+
+/* 首屏左侧文字 */
+
+.cases-hero-content h1 {
+    margin: 12px 0 25px;
+
+    font-size: clamp(48px, 6vw, 74px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.cases-hero-content h1 em {
+    color: var(--primary);
+    font-style: normal;
+}
+
+.cases-hero-content > p {
+    max-width: 650px;
+
+    color: var(--text-normal);
+
+    font-size: 18px;
+}
+
+.cases-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 34px;
+}
+
+
+/* ==================================================
+   2. 首屏右侧项目面板
+================================================== */
+
+.cases-hero-visual {
+    position: relative;
+    min-height: 500px;
+}
+
+.cases-hero-visual::before,
+.cases-hero-visual::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    border:
+        1px solid rgba(23, 105, 232, 0.14);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.cases-hero-visual::before {
+    width: 500px;
+    height: 500px;
+}
+
+.cases-hero-visual::after {
+    width: 390px;
+    height: 390px;
+
+    border-color:
+        rgba(16, 184, 201, 0.18);
+}
+
+
+/* 项目面板 */
+
+.case-dashboard {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+
+    width: min(100%, 480px);
+    padding: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 35px 85px rgba(15, 39, 76, 0.16);
+
+    backdrop-filter: blur(20px);
+
+    transform: translate(-50%, -50%);
+}
+
+.case-dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.case-dashboard-header small {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.case-dashboard-header strong {
+    display: block;
+    margin-top: 5px;
+
+    font-size: 20px;
+}
+
+.case-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    color: #087a59;
+    background: #e2faf2;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.case-status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    background: #11b77f;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(17, 183, 127, 0.12);
+}
+
+
+/* 面板中部 */
+
+.case-dashboard-main {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 24px;
+
+    margin: 26px 0;
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5ff,
+            #f9fcff
+        );
+
+    border-radius: 20px;
+}
+
+.dashboard-main-number {
+    min-height: 105px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    border-radius: 18px;
+
+    color: white;
+    text-align: center;
+}
+
+.dashboard-main-number span {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 11px;
+}
+
+.dashboard-main-number strong {
+    margin-top: 4px;
+
+    font-size: 24px;
+}
+
+.dashboard-progress {
+    display: grid;
+    gap: 10px;
+}
+
+.dashboard-progress > div {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-progress span {
+    color: var(--text-normal);
+
+    font-size: 11px;
+}
+
+.dashboard-progress i {
+    height: 7px;
+
+    overflow: hidden;
+
+    background: #dce8f7;
+    border-radius: 999px;
+}
+
+.dashboard-progress b {
+    display: block;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            #64a9ff
+        );
+
+    border-radius: inherit;
+}
+
+
+/* 面板底部 */
+
+.case-dashboard-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.case-dashboard-footer div {
+    padding: 14px 12px;
+
+    background: #f6f9fd;
+    border: 1px solid #e7edf5;
+    border-radius: 15px;
+}
+
+.case-dashboard-footer strong,
+.case-dashboard-footer span {
+    display: block;
+}
+
+.case-dashboard-footer strong {
+    font-size: 14px;
+}
+
+.case-dashboard-footer span {
+    margin-top: 3px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   3. 案例能力数据
+================================================== */
+
+.case-data-section {
+    color: white;
+    background: var(--background-dark);
+}
+
+.case-data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.case-data-grid > div {
+    min-height: 130px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.11);
+}
+
+.case-data-grid > div:last-child {
+    border-right: none;
+}
+
+.case-data-grid strong {
+    font-size: 20px;
+}
+
+.case-data-grid span {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   4. 案例列表标题
+================================================== */
+
+.case-list-section {
+    background: var(--background-light);
+}
+
+.case-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 70px;
+
+    margin-bottom: 45px;
+}
+
+.case-section-heading h2 {
+    margin-top: 4px;
+
+    font-size: clamp(34px, 4.5vw, 52px);
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+}
+
+.case-section-heading > p {
+    max-width: 500px;
+
+    color: var(--text-normal);
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   5. 现代案例卡片
+================================================== */
+
+.modern-case-grid {
+    display: grid;
+    gap: 28px;
+}
+
+.modern-case-card {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    min-height: 430px;
+
+    overflow: hidden;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+
+    box-shadow:
+        0 14px 45px rgba(15, 39, 76, 0.06);
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.modern-case-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 75px rgba(15, 39, 76, 0.13);
+}
+
+.modern-case-card:nth-child(even) {
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+.modern-case-card:nth-child(even) .modern-case-image {
+    order: 2;
+}
+
+.modern-case-card:nth-child(even) .modern-case-content {
+    order: 1;
+}
+
+
+/* 案例图片区域 */
+
+.modern-case-image {
+    position: relative;
+
+    min-height: 400px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+}
+
+.modern-case-image::before {
+    content: "";
+
+    position: absolute;
+    left: -80px;
+    bottom: -120px;
+
+    width: 280px;
+    height: 280px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+}
+
+.modern-case-image::after {
+    content: "";
+
+    position: absolute;
+    top: -120px;
+    right: -100px;
+
+    width: 320px;
+    height: 320px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+}
+
+.case-image-network {
+    background:
+        linear-gradient(
+            145deg,
+            #0f68e8,
+            #093d9c
+        );
+}
+
+.case-image-building {
+    background:
+        linear-gradient(
+            145deg,
+            #7358ed,
+            #3c2b92
+        );
+}
+
+.case-image-platform {
+    background:
+        linear-gradient(
+            145deg,
+            #08aebc,
+            #08727b
+        );
+}
+
+.case-category {
+    position: absolute;
+    z-index: 3;
+    top: 26px;
+    left: 27px;
+
+    padding: 8px 13px;
+
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.24);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* ==================================================
+   6. 企业网络案例图形
+================================================== */
+
+.network-graphic {
+    position: relative;
+    z-index: 2;
+
+    width: 300px;
+    height: 300px;
+}
+
+.network-center {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+
+    width: 92px;
+    height: 92px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--primary);
+    background: white;
+
+    border-radius: 28px;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.22);
+
+    transform: translate(-50%, -50%);
+}
+
+.network-point {
+    position: absolute;
+    z-index: 3;
+
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.38);
+
+    border-radius: 18px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    backdrop-filter: blur(12px);
+}
+
+.point-one {
+    top: 15px;
+    left: 25px;
+}
+
+.point-two {
+    top: 35px;
+    right: 15px;
+}
+
+.point-three {
+    right: 35px;
+    bottom: 18px;
+}
+
+.network-line {
+    position: absolute;
+    z-index: 1;
+
+    height: 2px;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+
+    transform-origin: left center;
+}
+
+.line-one {
+    width: 115px;
+    top: 96px;
+    left: 75px;
+
+    transform: rotate(28deg);
+}
+
+.line-two {
+    width: 110px;
+    top: 105px;
+    left: 168px;
+
+    transform: rotate(-30deg);
+}
+
+.line-three {
+    width: 100px;
+    top: 182px;
+    left: 170px;
+
+    transform: rotate(34deg);
+}
+
+
+/* ==================================================
+   7. 楼宇案例图形
+================================================== */
+
+.building-graphic {
+    position: relative;
+    z-index: 2;
+
+    width: 300px;
+    height: 300px;
+
+    display: grid;
+    place-items: center;
+}
+
+.building-main {
+    position: relative;
+    z-index: 3;
+
+    width: 155px;
+    height: 220px;
+    padding: 25px 22px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.38);
+
+    border-radius: 25px 25px 8px 8px;
+
+    backdrop-filter: blur(16px);
+}
+
+.building-main i {
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.signal-circle {
+    position: absolute;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+}
+
+.signal-one {
+    width: 300px;
+    height: 300px;
+}
+
+.signal-two {
+    width: 235px;
+    height: 235px;
+}
+
+.signal-three {
+    width: 185px;
+    height: 185px;
+}
+
+
+/* ==================================================
+   8. 平台案例图形
+================================================== */
+
+.platform-graphic {
+    position: relative;
+    z-index: 2;
+
+    width: 330px;
+    height: 280px;
+
+    display: grid;
+    place-items: center;
+}
+
+.platform-window {
+    width: 300px;
+    padding: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(16px);
+}
+
+.platform-top {
+    display: flex;
+    gap: 7px;
+
+    padding: 4px 4px 14px;
+}
+
+.platform-top i {
+    width: 8px;
+    height: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+}
+
+.platform-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    padding: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-radius: 15px;
+}
+
+.platform-content span {
+    height: 68px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2fafa,
+            #b9eced
+        );
+
+    border-radius: 12px;
+}
+
+.platform-content span:first-child {
+    grid-column: 1 / -1;
+
+    height: 82px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d6f8f8,
+            #94dddd
+        );
+}
+
+.platform-content b {
+    height: 9px;
+
+    background: #d7e3ec;
+    border-radius: 999px;
+}
+
+
+/* ==================================================
+   9. 案例卡片文字内容
+================================================== */
+
+.modern-case-content {
+    padding: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-number {
+    margin-bottom: 13px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.modern-case-content h3 {
+    margin-bottom: 17px;
+
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.modern-case-content > p {
+    color: var(--text-normal);
+
+    font-size: 15px;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 24px 0;
+}
+
+.case-tags span {
+    padding: 7px 11px;
+
+    color: #48607c;
+    background: #f2f6fb;
+
+    border: 1px solid #e0e8f1;
+    border-radius: 999px;
+
+    font-size: 12px;
+}
+
+.case-detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    width: fit-content;
+
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.case-detail-link span {
+    transition: transform 0.2s ease;
+}
+
+.case-detail-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==================================================
+   10. 案例详情
+================================================== */
+
+.case-detail-section {
+    background: white;
+}
+
+.case-detail-light {
+    background: var(--background-light);
+}
+
+.case-detail-layout {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    align-items: start;
+    gap: 90px;
+}
+
+.case-detail-heading {
+    position: sticky;
+    top: 120px;
+}
+
+.case-detail-number {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 28px;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 18px;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.case-detail-heading h2 {
+    margin: 5px 0 18px;
+
+    font-size: clamp(32px, 4vw, 47px);
+    line-height: 1.18;
+    letter-spacing: -1.3px;
+}
+
+.case-detail-heading p {
+    color: var(--text-normal);
+
+    font-size: 15px;
+}
+
+.case-detail-content {
+    display: grid;
+    gap: 16px;
+}
+
+.case-detail-content article {
+    padding: 28px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.case-detail-light .case-detail-content article {
+    background: #ffffff;
+}
+
+.case-detail-content article:hover {
+    transform: translateX(6px);
+
+    border-color: #bad2f8;
+
+    box-shadow:
+        0 18px 45px rgba(15, 39, 76, 0.08);
+}
+
+.case-detail-content article > span {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.case-detail-content h3 {
+    margin: 8px 0 10px;
+
+    font-size: 22px;
+}
+
+.case-detail-content p {
+    color: var(--text-normal);
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   11. 服务流程
+================================================== */
+
+.case-process-section {
+    background:
+        linear-gradient(
+            145deg,
+            #f5f9ff,
+            #ffffff
+        );
+}
+
+.case-process-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+}
+
+.case-process-grid article {
+    position: relative;
+
+    min-height: 220px;
+    padding: 24px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.case-process-grid article:hover {
+    transform: translateY(-6px);
+
+    border-color: #bcd5f8;
+
+    box-shadow:
+        0 20px 45px rgba(15, 39, 76, 0.1);
+}
+
+.case-process-grid article > span {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.case-process-grid h3 {
+    margin: 42px 0 8px;
+
+    font-size: 18px;
+}
+
+.case-process-grid p {
+    color: var(--text-normal);
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   12. 页面底部联系区域
+================================================== */
+
+.case-contact-section {
+    padding: 95px 0;
+
+    background: white;
+}
+
+.case-contact-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 70px;
+
+    padding: 58px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at right top,
+            rgba(63, 169, 255, 0.35),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #071426,
+            #0c397b
+        );
+
+    border-radius: 30px;
+}
+
+.case-contact-box h2 {
+    margin: 5px 0 14px;
+
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.18;
+}
+
+.case-contact-box p {
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.case-contact-actions {
+    min-width: 235px;
+
+    display: grid;
+    gap: 14px;
+}
+
+.case-white-button {
+    color: var(--primary);
+    background: white;
+}
+
+.case-white-button:hover {
+    color: white;
+    background: var(--primary);
+}
+
+.case-phone {
+    padding: 15px 18px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 14px;
+}
+
+.case-phone small,
+.case-phone strong {
+    display: block;
+}
+
+.case-phone small {
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 11px;
+}
+
+.case-phone strong {
+    margin-top: 3px;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   13. 平板适配
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .cases-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cases-hero-content {
+        text-align: center;
+    }
+
+    .cases-breadcrumb,
+    .cases-hero-actions {
+        justify-content: center;
+    }
+
+    .cases-hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cases-hero-visual {
+        min-height: 470px;
+    }
+
+    .case-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case-data-grid > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .case-process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .case-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .case-detail-heading {
+        position: static;
+    }
+
+    .case-contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .case-contact-actions {
+        min-width: 0;
+        max-width: 320px;
+    }
+
+}
+
+
+/* ==================================================
+   14. 中等屏幕适配
+================================================== */
+
+@media (max-width: 850px) {
+
+    .modern-case-card,
+    .modern-case-card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .modern-case-card:nth-child(even) .modern-case-image,
+    .modern-case-card:nth-child(even) .modern-case-content {
+        order: initial;
+    }
+
+    .modern-case-image {
+        min-height: 340px;
+    }
+
+    .modern-case-content {
+        padding: 36px;
+    }
+
+    .case-section-heading {
+        display: block;
+    }
+
+    .case-section-heading > p {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ==================================================
+   15. 手机适配
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cases-hero {
+        min-height: auto;
+        padding: 80px 0 90px;
+    }
+
+    .cases-hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .cases-hero-content > p {
+        font-size: 16px;
+    }
+
+    .cases-hero-visual {
+        min-height: 410px;
+    }
+
+    .cases-hero-visual::before {
+        width: 355px;
+        height: 355px;
+    }
+
+    .cases-hero-visual::after {
+        width: 285px;
+        height: 285px;
+    }
+
+    .case-dashboard {
+        padding: 20px;
+    }
+
+    .case-dashboard-header strong {
+        font-size: 17px;
+    }
+
+    .case-dashboard-main {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-main-number {
+        min-height: 80px;
+    }
+
+    .case-dashboard-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .case-dashboard-footer div:nth-child(n + 2) {
+        display: none;
+    }
+
+    .case-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-data-grid > div {
+        min-height: 105px;
+
+        border-right: none;
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .case-data-grid > div:last-child {
+        border-bottom: none;
+    }
+
+    .modern-case-image {
+        min-height: 300px;
+    }
+
+    .network-graphic,
+    .building-graphic {
+        transform: scale(0.82);
+    }
+
+    .platform-graphic {
+        transform: scale(0.85);
+    }
+
+    .modern-case-content {
+        padding: 28px 23px;
+    }
+
+    .case-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-process-grid article {
+        min-height: 175px;
+    }
+
+    .case-process-grid h3 {
+        margin-top: 27px;
+    }
+
+    .case-contact-box {
+        padding: 34px 23px;
+    }
+
+}
+
+
+/* ==================================================
+   16. 减少动画设置
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .modern-case-card,
+    .case-detail-content article,
+    .case-process-grid article {
+        transition: none;
+    }
+
+}

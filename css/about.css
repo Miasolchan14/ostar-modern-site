@@ -1,0 +1,1463 @@
+/* ==================================================
+   关于我们页面专用样式
+================================================== */
+
+
+/* ==================================================
+   1. 关于我们首屏
+================================================== */
+
+.about-page-hero {
+    position: relative;
+    min-height: 690px;
+    padding: 110px 0 120px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 82% 22%,
+            rgba(23, 105, 232, 0.17),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 68% 85%,
+            rgba(16, 184, 201, 0.12),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #f7fbff 0%,
+            #ffffff 50%,
+            #edf6ff 100%
+        );
+}
+
+.about-hero-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(23, 105, 232, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(23, 105, 232, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 64px 64px;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black,
+            transparent 85%
+        );
+}
+
+.about-page-hero::before {
+    content: "";
+
+    position: absolute;
+    top: -250px;
+    right: -190px;
+
+    width: 720px;
+    height: 720px;
+
+    border:
+        1px solid rgba(23, 105, 232, 0.12);
+
+    border-radius: 50%;
+}
+
+.about-page-hero::after {
+    content: "";
+
+    position: absolute;
+    top: -135px;
+    right: -75px;
+
+    width: 500px;
+    height: 500px;
+
+    border:
+        1px solid rgba(16, 184, 201, 0.15);
+
+    border-radius: 50%;
+}
+
+.about-page-hero-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+
+/* 面包屑 */
+
+.about-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 26px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.about-breadcrumb a {
+    transition: color 0.2s ease;
+}
+
+.about-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.about-breadcrumb strong {
+    color: var(--text-dark);
+}
+
+
+/* 首屏左侧文字 */
+
+.about-page-hero-content h1 {
+    margin: 12px 0 25px;
+
+    font-size: clamp(48px, 6vw, 74px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.about-page-hero-content h1 em {
+    color: var(--primary);
+    font-style: normal;
+}
+
+.about-page-hero-content > p {
+    max-width: 640px;
+
+    color: var(--text-normal);
+
+    font-size: 18px;
+}
+
+.about-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 34px;
+}
+
+
+/* ==================================================
+   2. 首屏右侧视觉区域
+================================================== */
+
+.about-page-visual {
+    position: relative;
+    min-height: 520px;
+}
+
+.about-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border:
+        1px solid rgba(23, 105, 232, 0.18);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.about-orbit-one {
+    width: 500px;
+    height: 500px;
+}
+
+.about-orbit-two {
+    width: 365px;
+    height: 365px;
+
+    border-color:
+        rgba(16, 184, 201, 0.22);
+}
+
+
+/* 中心年份 */
+
+.about-core {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(255, 255, 255, 0.22),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    border:
+        8px solid rgba(255, 255, 255, 0.75);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 35px 80px rgba(23, 105, 232, 0.3);
+
+    transform: translate(-50%, -50%);
+}
+
+.about-core-small {
+    color: rgba(255, 255, 255, 0.67);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-core strong {
+    margin: 3px 0;
+
+    font-size: 54px;
+    line-height: 1;
+}
+
+.about-core > span:last-child {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+}
+
+
+/* 浮动能力卡片 */
+
+.about-floating-item {
+    position: absolute;
+    z-index: 4;
+
+    min-width: 152px;
+    padding: 14px 17px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border:
+        1px solid rgba(216, 228, 241, 0.95);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 18px 45px rgba(15, 39, 76, 0.13);
+
+    backdrop-filter: blur(14px);
+}
+
+.about-floating-item > span {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.about-floating-item strong,
+.about-floating-item small {
+    display: block;
+}
+
+.about-floating-item strong {
+    font-size: 14px;
+}
+
+.about-floating-item small {
+    margin-top: 2px;
+
+    color: var(--text-light);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about-floating-one {
+    top: 55px;
+    left: 5px;
+}
+
+.about-floating-two {
+    top: 95px;
+    right: -2px;
+}
+
+.about-floating-three {
+    left: 12px;
+    bottom: 72px;
+}
+
+.about-floating-four {
+    right: 7px;
+    bottom: 38px;
+}
+
+
+/* ==================================================
+   3. 页面内部导航
+================================================== */
+
+.about-subnav-section {
+    position: relative;
+    z-index: 20;
+
+    background: white;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-subnav {
+    min-height: 92px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+}
+
+.about-subnav a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    color: var(--text-normal);
+
+    border-right: 1px solid var(--border);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.about-subnav a:first-child {
+    border-left: 1px solid var(--border);
+}
+
+.about-subnav a::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: var(--primary);
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+.about-subnav a:hover,
+.about-subnav a.active {
+    color: var(--primary);
+    background: #f8fbff;
+}
+
+.about-subnav a:hover::after,
+.about-subnav a.active::after {
+    width: 100%;
+}
+
+.about-subnav a span {
+    color: var(--primary);
+
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   4. 公司简介
+================================================== */
+
+.company-profile-section {
+    background: white;
+}
+
+.company-profile-layout {
+    display: grid;
+    grid-template-columns: 0.72fr 1.28fr;
+    align-items: start;
+    gap: 100px;
+}
+
+.company-profile-heading {
+    position: sticky;
+    top: 120px;
+}
+
+.company-profile-heading h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.company-profile-year {
+    margin-top: 45px;
+    padding-top: 30px;
+
+    border-top: 1px solid var(--border);
+}
+
+.company-profile-year strong {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 64px;
+    line-height: 1;
+}
+
+.company-profile-year span {
+    display: block;
+    margin-top: 8px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.company-profile-content {
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fbff,
+            #eef5ff
+        );
+
+    border: 1px solid #dce9f8;
+    border-radius: 30px;
+}
+
+.company-profile-content p {
+    margin-bottom: 20px;
+
+    color: var(--text-normal);
+
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+.company-profile-content .company-introduction-lead {
+    color: var(--text-dark);
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.company-profile-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 32px;
+    padding-top: 28px;
+
+    border-top: 1px solid #d7e4f3;
+}
+
+.company-profile-keywords span {
+    padding: 8px 13px;
+
+    color: #3f5874;
+    background: white;
+
+    border: 1px solid #dce6f1;
+    border-radius: 999px;
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   5. 企业核心数据
+================================================== */
+
+.about-data-section {
+    padding: 40px 0;
+
+    color: white;
+    background: var(--background-dark);
+}
+
+.about-data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.about-data-grid article {
+    min-height: 180px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.11);
+}
+
+.about-data-grid article:last-child {
+    border-right: none;
+}
+
+.about-data-grid article > span {
+    margin-bottom: 24px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.about-data-grid strong {
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.about-data-grid p {
+    margin-top: 8px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   6. 发展与能力
+================================================== */
+
+.development-section {
+    background: var(--background-light);
+}
+
+.about-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 80px;
+
+    margin-bottom: 48px;
+}
+
+.about-section-heading h2 {
+    margin-top: 5px;
+
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+}
+
+.about-section-heading > p {
+    max-width: 510px;
+
+    color: var(--text-normal);
+
+    font-size: 16px;
+}
+
+.development-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.development-card {
+    position: relative;
+
+    min-height: 335px;
+    padding: 28px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 23px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.27s ease,
+        box-shadow 0.27s ease,
+        border-color 0.27s ease;
+}
+
+.development-card::after {
+    content: "";
+
+    position: absolute;
+    right: -55px;
+    bottom: -65px;
+
+    width: 145px;
+    height: 145px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(23, 105, 232, 0.11),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+}
+
+.development-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #b9d4fb;
+
+    box-shadow:
+        0 25px 60px rgba(15, 39, 76, 0.11);
+}
+
+.development-number {
+    position: absolute;
+    top: 22px;
+    right: 23px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.development-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 16px;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.development-card h3 {
+    margin: 70px 0 13px;
+
+    font-size: 21px;
+}
+
+.development-card p {
+    color: var(--text-normal);
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   7. 荣誉资质
+================================================== */
+
+.honor-section {
+    background: white;
+}
+
+.honor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.honor-card {
+    position: relative;
+
+    min-height: 330px;
+    padding: 25px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 23px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.27s ease,
+        box-shadow 0.27s ease,
+        border-color 0.27s ease;
+}
+
+.honor-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #bad3f7;
+
+    box-shadow:
+        0 25px 60px rgba(15, 39, 76, 0.11);
+}
+
+.honor-featured {
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    border-color: transparent;
+}
+
+.honor-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.honor-top span {
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.honor-top strong {
+    color: var(--primary);
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.honor-featured .honor-top span,
+.honor-featured .honor-top strong {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.honor-symbol {
+    width: 78px;
+    height: 78px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 45px 0 30px;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 23px;
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.honor-featured .honor-symbol {
+    color: white;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.honor-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+.honor-card p {
+    color: var(--text-normal);
+
+    font-size: 13px;
+}
+
+.honor-featured p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* 证书图片占位卡 */
+
+.honor-upload {
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #f8fbff,
+            #f8fbff 12px,
+            #f1f6fc 12px,
+            #f1f6fc 24px
+        );
+
+    border-style: dashed;
+}
+
+.upload-icon {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 20px;
+
+    color: var(--primary);
+    background: white;
+
+    border: 1px solid #d8e5f4;
+    border-radius: 18px;
+
+    font-size: 26px;
+
+    box-shadow:
+        0 13px 30px rgba(15, 39, 76, 0.08);
+}
+
+
+/* ==================================================
+   8. 人才招聘
+================================================== */
+
+.career-section {
+    background:
+        linear-gradient(
+            145deg,
+            #f4f8fd,
+            #ffffff
+        );
+}
+
+.career-layout {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    align-items: start;
+    gap: 85px;
+}
+
+.career-introduction {
+    position: sticky;
+    top: 120px;
+}
+
+.career-introduction h2 {
+    margin: 5px 0 22px;
+
+    font-size: clamp(38px, 5vw, 55px);
+    line-height: 1.16;
+    letter-spacing: -1.5px;
+}
+
+.career-introduction > p {
+    color: var(--text-normal);
+
+    font-size: 16px;
+}
+
+.career-introduction .career-note {
+    margin-top: 16px;
+    padding: 15px 17px;
+
+    color: #50637b;
+    background: #edf4fd;
+
+    border-left: 3px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+
+    font-size: 13px;
+}
+
+.career-contact {
+    display: grid;
+    gap: 11px;
+
+    margin-top: 30px;
+}
+
+.career-contact a {
+    padding: 16px 18px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.career-contact a:hover {
+    transform: translateX(5px);
+
+    border-color: #bdd5f8;
+
+    box-shadow:
+        0 14px 35px rgba(15, 39, 76, 0.08);
+}
+
+.career-contact small,
+.career-contact strong {
+    display: block;
+}
+
+.career-contact small {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+.career-contact strong {
+    margin-top: 4px;
+
+    font-size: 15px;
+}
+
+
+/* 招聘方向 */
+
+.career-content {
+    display: grid;
+    gap: 14px;
+}
+
+.career-content > article {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 19px;
+
+    padding: 25px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.career-content > article:hover {
+    transform: translateX(6px);
+
+    border-color: #bad3f8;
+
+    box-shadow:
+        0 18px 45px rgba(15, 39, 76, 0.09);
+}
+
+.career-number {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 15px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.career-content h3 {
+    margin-bottom: 6px;
+
+    font-size: 19px;
+}
+
+.career-content p {
+    color: var(--text-normal);
+
+    font-size: 14px;
+}
+
+
+/* 简历投递框 */
+
+.career-apply-box {
+    margin-top: 8px;
+    padding: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at right top,
+            rgba(69, 167, 255, 0.35),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #071426,
+            #0a3779
+        );
+
+    border-radius: 22px;
+}
+
+.career-apply-box > div > span {
+    color: #91c3ff;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.career-apply-box h3 {
+    margin: 5px 0;
+
+    font-size: 21px;
+}
+
+.career-apply-box p {
+    color: rgba(255, 255, 255, 0.63);
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   9. 页面底部联系区域
+================================================== */
+
+.about-contact-section {
+    padding: 95px 0;
+
+    background: white;
+}
+
+.about-contact-box {
+    padding: 58px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 70px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at right top,
+            rgba(61, 170, 255, 0.38),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #071426,
+            #0c3d83
+        );
+
+    border-radius: 30px;
+}
+
+.about-contact-box h2 {
+    margin: 5px 0 13px;
+
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.18;
+}
+
+.about-contact-box p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.about-contact-actions {
+    min-width: 225px;
+
+    display: grid;
+    gap: 12px;
+}
+
+.about-white-button,
+.about-case-button {
+    min-height: 52px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.about-white-button {
+    color: var(--primary);
+    background: white;
+}
+
+.about-white-button:hover {
+    transform: translateY(-3px);
+
+    color: white;
+    background: var(--primary);
+}
+
+.about-case-button {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.17);
+}
+
+.about-case-button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==================================================
+   10. 平板适配
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .about-page-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page-hero-content {
+        text-align: center;
+    }
+
+    .about-breadcrumb,
+    .about-hero-actions {
+        justify-content: center;
+    }
+
+    .about-page-hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-page-visual {
+        min-height: 500px;
+    }
+
+    .company-profile-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .company-profile-heading {
+        position: static;
+    }
+
+    .company-profile-heading h2 br {
+        display: none;
+    }
+
+    .company-profile-year {
+        max-width: 250px;
+    }
+
+    .about-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-data-grid article:nth-child(2) {
+        border-right: none;
+    }
+
+    .development-grid,
+    .honor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .career-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .career-introduction {
+        position: static;
+    }
+
+    .about-contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .about-contact-actions {
+        min-width: 0;
+        max-width: 330px;
+    }
+
+}
+
+
+/* ==================================================
+   11. 中等屏幕适配
+================================================== */
+
+@media (max-width: 850px) {
+
+    .about-subnav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-subnav a:nth-child(2) {
+        border-right: none;
+    }
+
+    .about-subnav a:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .about-section-heading {
+        display: block;
+    }
+
+    .about-section-heading > p {
+        margin-top: 16px;
+    }
+
+    .career-apply-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==================================================
+   12. 手机适配
+================================================== */
+
+@media (max-width: 600px) {
+
+    .about-page-hero {
+        min-height: auto;
+        padding: 80px 0 90px;
+    }
+
+    .about-page-hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .about-page-hero-content > p {
+        font-size: 16px;
+    }
+
+    .about-page-visual {
+        min-height: 410px;
+    }
+
+    .about-orbit-one {
+        width: 360px;
+        height: 360px;
+    }
+
+    .about-orbit-two {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-core {
+        width: 175px;
+        height: 175px;
+    }
+
+    .about-core strong {
+        font-size: 43px;
+    }
+
+    .about-floating-item {
+        min-width: 130px;
+        padding: 11px 13px;
+    }
+
+    .about-floating-item strong {
+        font-size: 12px;
+    }
+
+    .about-floating-one {
+        top: 35px;
+        left: 0;
+    }
+
+    .about-floating-two {
+        top: 65px;
+        right: 0;
+    }
+
+    .about-floating-three {
+        left: 0;
+        bottom: 45px;
+    }
+
+    .about-floating-four {
+        right: 0;
+        bottom: 20px;
+    }
+
+    .about-subnav {
+        min-height: auto;
+    }
+
+    .about-subnav a {
+        min-height: 70px;
+
+        font-size: 12px;
+    }
+
+    .company-profile-content {
+        padding: 27px 22px;
+    }
+
+    .company-profile-content .company-introduction-lead {
+        font-size: 19px;
+    }
+
+    .company-profile-content p {
+        font-size: 15px;
+    }
+
+    .company-profile-year strong {
+        font-size: 52px;
+    }
+
+    .about-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-data-grid article {
+        min-height: 130px;
+
+        border-right: none;
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .about-data-grid article:last-child {
+        border-bottom: none;
+    }
+
+    .development-grid,
+    .honor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .development-card,
+    .honor-card {
+        min-height: 300px;
+    }
+
+    .career-content > article {
+        grid-template-columns: 49px 1fr;
+        padding: 21px;
+    }
+
+    .career-number {
+        width: 43px;
+        height: 43px;
+    }
+
+    .career-contact strong {
+        overflow-wrap: anywhere;
+    }
+
+    .career-apply-box {
+        padding: 24px;
+    }
+
+    .about-contact-box {
+        padding: 34px 23px;
+    }
+
+    .about-contact-actions {
+        max-width: none;
+    }
+
+}
+
+
+/* ==================================================
+   13. 减少动画设置
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .development-card,
+    .honor-card,
+    .career-content > article,
+    .career-contact a {
+        transition: none;
+    }
+
+}
