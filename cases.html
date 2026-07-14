@@ -2,998 +2,1184 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <meta
-        name="description"
-        content="奥斯达通信客户案例，展示企业网络建设、通信工程、系统集成与数字化服务案例。"
-    >
+  <meta
+    name="description"
+    content="奥斯达通信客户案例，展示企业网络建设、通信工程、系统集成与数字化服务案例。"
+  >
 
-    <title>客户案例｜奥斯达通信</title>
+  <title>客户案例｜奥斯达通信</title>
 
-    <!-- 使用首页的公共样式 -->
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+  <!-- 网站公共样式 -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 
-    <!-- 下一步建立客户案例专用样式 -->
-    <link
-        rel="stylesheet"
-        href="css/cases.css"
-    >
+  <!-- 客户案例页面专用样式 -->
+  <link
+    rel="stylesheet"
+    href="css/cases.css"
+  >
+
+  <!-- 新 Logo 显示尺寸 -->
+  <style>
+    .header-logo-image {
+      display: block;
+      width: auto;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .footer-logo-image {
+      display: block;
+      width: auto;
+      height: 125px;
+      margin-bottom: 20px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .header-logo-image {
+        height: 52px;
+      }
+
+      .footer-logo-image {
+        height: 105px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- 顶部导航 -->
-    <header class="site-header">
+  <a
+    class="skip-link"
+    href="#main"
+  >
+    跳到主要内容
+  </a>
 
-        <div class="container header-inner">
+  <!-- 顶部导航栏 -->
+  <header
+    class="site-header"
+    id="top"
+  >
+    <div class="container header-inner">
+
+      <!-- 新 Logo -->
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="返回奥斯达通信首页"
+      >
+        <img
+          class="header-logo-image"
+          src="images/ostar-logo-web.jpg"
+          alt="奥斯达通信 Ostar Telecom"
+        >
+      </a>
+
+      <!-- 主导航 -->
+      <nav
+        class="main-nav"
+        id="mainNav"
+        aria-label="主要导航"
+      >
+
+        <a href="index.html">
+          网站首页
+        </a>
+
+        <a href="about.html">
+          关于我们
+        </a>
+
+        <a href="index.html#services">
+          服务项目
+        </a>
+
+        <a href="index.html#cases">
+          行业解决方案
+        </a>
+
+        <a href="news.html">
+          新闻动态
+        </a>
+
+        <a
+          class="active"
+          href="cases.html"
+        >
+          客户案例
+        </a>
+
+        <a
+          class="nav-contact"
+          href="index.html#contact"
+        >
+          联系我们
+        </a>
+
+      </nav>
+
+      <!-- 手机端菜单按钮 -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="打开导航菜单"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 客户案例首屏 -->
+    <section class="cases-hero">
+
+      <div
+        class="cases-hero-decoration"
+        aria-hidden="true"
+      ></div>
+
+      <div class="container cases-hero-layout">
+
+        <!-- 左侧文字 -->
+        <div class="cases-hero-content reveal">
+
+          <div class="cases-breadcrumb">
+
+            <a href="index.html">
+              首页
+            </a>
+
+            <span>/</span>
+
+            <strong>
+              客户案例
+            </strong>
+
+          </div>
+
+          <span class="section-label">
+            CUSTOMER CASES
+          </span>
+
+          <h1>
+            用专业技术
+            <br>
+            <em>解决企业实际问题</em>
+          </h1>
+
+          <p>
+            围绕企业网络、通信工程、系统集成和数字化建设需求，
+            奥斯达通信提供从前期规划、方案设计到实施交付和后期维护的完整服务。
+          </p>
+
+          <div class="cases-hero-actions">
 
             <a
-                class="brand"
-                href="index.html"
-                aria-label="返回奥斯达通信首页"
+              class="button button-primary"
+              href="#caseList"
             >
-                <span class="brand-mark">O</span>
-
-                <span class="brand-text">
-                    <strong>奥斯达通信</strong>
-                    <small>OSTAR TELECOM</small>
-                </span>
+              查看项目案例
+              <span>↓</span>
             </a>
 
-
-            <nav
-                class="main-nav"
-                id="mainNav"
-                aria-label="主要导航"
+            <a
+              class="button button-secondary"
+              href="index.html#contact"
             >
-                <a href="index.html">
-                    网站首页
-                </a>
+              咨询项目方案
+            </a>
 
-                <a href="index.html#about">
-                    关于我们
-                </a>
-
-                <a href="index.html#services">
-                    服务项目
-                </a>
-
-                <a href="index.html#solutions">
-                    行业解决方案
-                </a>
-
-                <a href="index.html#news">
-                    新闻动态
-                </a>
-
-                <a
-                    class="active"
-                    href="cases.html"
-                >
-                    客户案例
-                </a>
-
-                <a
-                    class="nav-contact"
-                    href="index.html#contact"
-                >
-                    联系我们
-                </a>
-            </nav>
-
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="打开导航菜单"
-                aria-expanded="false"
-                aria-controls="mainNav"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          </div>
 
         </div>
 
-    </header>
-
-
-    <main>
-
-        <!-- 客户案例首屏 -->
-        <section class="cases-hero">
-
-            <div class="cases-hero-decoration"></div>
-
-            <div class="container cases-hero-layout">
-
-                <div class="cases-hero-content">
-
-                    <div class="cases-breadcrumb">
-                        <a href="index.html">首页</a>
-                        <span>/</span>
-                        <strong>客户案例</strong>
-                    </div>
-
-                    <span class="section-label">
-                        CUSTOMER CASES
-                    </span>
-
-                    <h1>
-                        用专业技术
-                        <br>
-                        <em>解决企业实际问题</em>
-                    </h1>
-
-                    <p>
-                        围绕企业网络、通信工程、系统集成和数字化建设需求，
-                        奥斯达通信提供从前期规划、方案设计到实施交付和后期维护的完整服务。
-                    </p>
-
-                    <div class="cases-hero-actions">
-
-                        <a
-                            class="button button-primary"
-                            href="#caseList"
-                        >
-                            查看项目案例
-                            <span>↓</span>
-                        </a>
-
-                        <a
-                            class="button button-secondary"
-                            href="index.html#contact"
-                        >
-                            咨询项目方案
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 右侧现代化案例面板 -->
-                <div class="cases-hero-visual">
-
-                    <div class="case-dashboard">
-
-                        <div class="case-dashboard-header">
-
-                            <div>
-                                <small>PROJECT OVERVIEW</small>
-                                <strong>企业项目服务中心</strong>
-                            </div>
-
-                            <span class="case-status">
-                                持续服务
-                            </span>
-
-                        </div>
-
-
-                        <div class="case-dashboard-main">
-
-                            <div class="dashboard-main-number">
-                                <span>项目能力</span>
-                                <strong>全流程</strong>
-                            </div>
-
-                            <div class="dashboard-progress">
-
-                                <div>
-                                    <span>需求分析</span>
-                                    <i>
-                                        <b style="width: 92%;"></b>
-                                    </i>
-                                </div>
-
-                                <div>
-                                    <span>方案设计</span>
-                                    <i>
-                                        <b style="width: 86%;"></b>
-                                    </i>
-                                </div>
-
-                                <div>
-                                    <span>实施交付</span>
-                                    <i>
-                                        <b style="width: 95%;"></b>
-                                    </i>
-                                </div>
-
-                                <div>
-                                    <span>运维支持</span>
-                                    <i>
-                                        <b style="width: 88%;"></b>
-                                    </i>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="case-dashboard-footer">
-
-                            <div>
-                                <strong>网络建设</strong>
-                                <span>企业连接</span>
-                            </div>
-
-                            <div>
-                                <strong>通信工程</strong>
-                                <span>现场实施</span>
-                            </div>
-
-                            <div>
-                                <strong>系统集成</strong>
-                                <span>平台建设</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 案例能力概览 -->
-        <section class="case-data-section">
-
-            <div class="container case-data-grid">
-
-                <div>
-                    <strong>需求分析</strong>
-                    <span>了解企业业务与使用场景</span>
-                </div>
-
-                <div>
-                    <strong>方案规划</strong>
-                    <span>制定适合的技术实施方案</span>
-                </div>
-
-                <div>
-                    <strong>项目交付</strong>
-                    <span>完成建设、调试和验收</span>
-                </div>
-
-                <div>
-                    <strong>持续维护</strong>
-                    <span>提供后期技术支持服务</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 项目案例列表 -->
-        <section
-            class="section case-list-section"
-            id="caseList"
+        <!-- 右侧项目能力面板 -->
+        <div
+          class="cases-hero-visual reveal"
+          aria-label="企业项目服务能力示意图"
         >
 
-            <div class="container">
-
-                <div class="case-section-heading reveal">
-
-                    <div>
-                        <span class="section-label">
-                            PROJECT CASES
-                        </span>
-
-                        <h2>
-                            典型项目服务场景
-                        </h2>
-                    </div>
-
-                    <p>
-                        根据企业所在行业、办公环境和业务规模，
-                        提供不同类型的网络、通信和数字化解决方案。
-                    </p>
-
-                </div>
-
-
-                <div class="modern-case-grid">
-
-                    <!-- 案例一 -->
-                    <article class="modern-case-card reveal">
-
-                        <div class="modern-case-image case-image-network">
-
-                            <span class="case-category">
-                                企业网络
-                            </span>
-
-                            <div class="network-graphic">
-
-                                <span class="network-center">
-                                    HQ
-                                </span>
-
-                                <span class="network-point point-one">
-                                    01
-                                </span>
-
-                                <span class="network-point point-two">
-                                    02
-                                </span>
-
-                                <span class="network-point point-three">
-                                    03
-                                </span>
-
-                                <i class="network-line line-one"></i>
-                                <i class="network-line line-two"></i>
-                                <i class="network-line line-three"></i>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="modern-case-content">
-
-                            <div class="case-number">
-                                CASE 01
-                            </div>
-
-                            <h3>
-                                企业总部与分支机构网络建设
-                            </h3>
-
-                            <p>
-                                针对企业总部与多个分支机构之间的通信需求，
-                                通过互联网专线、SD-WAN及企业网络服务，
-                                建立稳定、高效的跨地域连接。
-                            </p>
-
-                            <div class="case-tags">
-                                <span>SD-WAN</span>
-                                <span>企业专线</span>
-                                <span>跨地域连接</span>
-                            </div>
-
-                            <a
-                                class="case-detail-link"
-                                href="#networkCase"
-                            >
-                                查看项目详情
-                                <span>→</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- 案例二 -->
-                    <article class="modern-case-card reveal">
-
-                        <div class="modern-case-image case-image-building">
-
-                            <span class="case-category">
-                                通信工程
-                            </span>
-
-                            <div class="building-graphic">
-
-                                <div class="building-main">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-
-                                <div class="signal-circle signal-one"></div>
-                                <div class="signal-circle signal-two"></div>
-                                <div class="signal-circle signal-three"></div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="modern-case-content">
-
-                            <div class="case-number">
-                                CASE 02
-                            </div>
-
-                            <h3>
-                                商业楼宇通信覆盖工程
-                            </h3>
-
-                            <p>
-                                面向商业楼宇、地下空间、电梯和公共区域，
-                                通过现场勘察、工程设计和系统施工，
-                                改善室内通信信号覆盖效果。
-                            </p>
-
-                            <div class="case-tags">
-                                <span>室内覆盖</span>
-                                <span>通信工程</span>
-                                <span>现场实施</span>
-                            </div>
-
-                            <a
-                                class="case-detail-link"
-                                href="#buildingCase"
-                            >
-                                查看项目详情
-                                <span>→</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- 案例三 -->
-                    <article class="modern-case-card reveal">
-
-                        <div class="modern-case-image case-image-platform">
-
-                            <span class="case-category">
-                                系统集成
-                            </span>
-
-                            <div class="platform-graphic">
-
-                                <div class="platform-window">
-
-                                    <div class="platform-top">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                    </div>
-
-                                    <div class="platform-content">
-
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-
-                                        <b></b>
-                                        <b></b>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="modern-case-content">
-
-                            <div class="case-number">
-                                CASE 03
-                            </div>
-
-                            <h3>
-                                企业数字化平台系统集成
-                            </h3>
-
-                            <p>
-                                整合企业网络、硬件设备、管理软件和业务平台，
-                                减少信息分散问题，提升企业日常管理和运营效率。
-                            </p>
-
-                            <div class="case-tags">
-                                <span>系统集成</span>
-                                <span>管理平台</span>
-                                <span>数字化建设</span>
-                            </div>
-
-                            <a
-                                class="case-detail-link"
-                                href="#platformCase"
-                            >
-                                查看项目详情
-                                <span>→</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
+          <div class="case-dashboard">
+
+            <div class="case-dashboard-header">
+
+              <div>
+                <small>
+                  PROJECT OVERVIEW
+                </small>
+
+                <strong>
+                  企业项目服务中心
+                </strong>
+              </div>
+
+              <span class="case-status">
+                持续服务
+              </span>
 
             </div>
 
-        </section>
+            <div class="case-dashboard-main">
 
+              <div class="dashboard-main-number">
 
-        <!-- 案例详情一 -->
-        <section
-            class="section case-detail-section"
-            id="networkCase"
-        >
+                <span>
+                  项目能力
+                </span>
 
-            <div class="container case-detail-layout">
+                <strong>
+                  全流程
+                </strong>
 
-                <div class="case-detail-heading reveal">
+              </div>
 
-                    <span class="case-detail-number">
-                        01
-                    </span>
-
-                    <span class="section-label">
-                        ENTERPRISE NETWORK
-                    </span>
-
-                    <h2>
-                        企业总部与分支机构网络建设
-                    </h2>
-
-                    <p>
-                        适用于拥有多个办公地点、门店、园区或业务节点的企业。
-                    </p>
-
-                </div>
-
-
-                <div class="case-detail-content reveal">
-
-                    <article>
-
-                        <span>项目需求</span>
-
-                        <h3>
-                            多个办公地点之间连接不稳定
-                        </h3>
-
-                        <p>
-                            企业总部与各分支机构之间需要传输业务数据、
-                            访问内部系统并进行日常协作，
-                            原有网络存在延迟高、线路管理复杂等问题。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>解决方案</span>
-
-                        <h3>
-                            建设统一的企业网络连接体系
-                        </h3>
-
-                        <p>
-                            根据企业业务位置和网络使用情况，
-                            组合互联网专线、SD-WAN和安全访问服务，
-                            实现总部与分支机构之间的统一连接。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>项目价值</span>
-
-                        <h3>
-                            提升网络稳定性和管理效率
-                        </h3>
-
-                        <p>
-                            改善企业不同办公地点之间的数据访问体验，
-                            降低线路管理难度，为业务持续运营提供支持。
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 案例详情二 -->
-        <section
-            class="section case-detail-section case-detail-light"
-            id="buildingCase"
-        >
-
-            <div class="container case-detail-layout">
-
-                <div class="case-detail-heading reveal">
-
-                    <span class="case-detail-number">
-                        02
-                    </span>
-
-                    <span class="section-label">
-                        COMMUNICATION ENGINEERING
-                    </span>
-
-                    <h2>
-                        商业楼宇通信覆盖工程
-                    </h2>
-
-                    <p>
-                        适用于商业中心、写字楼、地下室、电梯和园区等环境。
-                    </p>
-
-                </div>
-
-
-                <div class="case-detail-content reveal">
-
-                    <article>
-
-                        <span>项目需求</span>
-
-                        <h3>
-                            室内部分区域通信信号较弱
-                        </h3>
-
-                        <p>
-                            受到建筑结构、楼层高度和地下空间等因素影响，
-                            部分区域可能存在信号覆盖不足或通信体验不稳定的问题。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>解决方案</span>
-
-                        <h3>
-                            完成现场勘察与覆盖设计
-                        </h3>
-
-                        <p>
-                            对建筑内部环境和使用需求进行分析，
-                            制定通信覆盖方案，完成设备安装、线路施工和系统调试。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>项目价值</span>
-
-                        <h3>
-                            改善重点区域通信使用体验
-                        </h3>
-
-                        <p>
-                            提升地下空间、电梯、商业区和办公区域的通信质量，
-                            为人员办公和商业运营提供稳定支持。
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 案例详情三 -->
-        <section
-            class="section case-detail-section"
-            id="platformCase"
-        >
-
-            <div class="container case-detail-layout">
-
-                <div class="case-detail-heading reveal">
-
-                    <span class="case-detail-number">
-                        03
-                    </span>
-
-                    <span class="section-label">
-                        SYSTEM INTEGRATION
-                    </span>
-
-                    <h2>
-                        企业数字化平台系统集成
-                    </h2>
-
-                    <p>
-                        适用于需要整合网络、硬件、软件和管理系统的企业。
-                    </p>
-
-                </div>
-
-
-                <div class="case-detail-content reveal">
-
-                    <article>
-
-                        <span>项目需求</span>
-
-                        <h3>
-                            企业系统和业务数据较为分散
-                        </h3>
-
-                        <p>
-                            不同部门使用独立软件和设备，
-                            数据难以统一管理，信息传递和内部协作效率受到影响。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>解决方案</span>
-
-                        <h3>
-                            整合网络、设备和业务平台
-                        </h3>
-
-                        <p>
-                            根据企业管理需求，规划平台结构，
-                            将网络、硬件设备、软件系统和业务数据进行统一连接。
-                        </p>
-
-                    </article>
-
-                    <article>
-
-                        <span>项目价值</span>
-
-                        <h3>
-                            提高企业信息管理和运营效率
-                        </h3>
-
-                        <p>
-                            减少重复操作和数据分散问题，
-                            帮助管理人员更加及时地了解业务运行情况。
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 项目流程 -->
-        <section class="section case-process-section">
-
-            <div class="container">
-
-                <div class="case-section-heading reveal">
-
-                    <div>
-                        <span class="section-label">
-                            SERVICE PROCESS
-                        </span>
-
-                        <h2>
-                            项目服务流程
-                        </h2>
-                    </div>
-
-                    <p>
-                        从需求沟通到项目维护，
-                        为企业提供清晰、规范的项目服务过程。
-                    </p>
-
-                </div>
-
-
-                <div class="case-process-grid">
-
-                    <article class="reveal">
-                        <span>01</span>
-                        <h3>需求沟通</h3>
-                        <p>
-                            了解企业业务、使用环境和项目目标。
-                        </p>
-                    </article>
-
-                    <article class="reveal">
-                        <span>02</span>
-                        <h3>现场勘察</h3>
-                        <p>
-                            分析网络、设备和现场建设条件。
-                        </p>
-                    </article>
-
-                    <article class="reveal">
-                        <span>03</span>
-                        <h3>方案设计</h3>
-                        <p>
-                            制定技术方案、建设计划和实施步骤。
-                        </p>
-                    </article>
-
-                    <article class="reveal">
-                        <span>04</span>
-                        <h3>项目实施</h3>
-                        <p>
-                            完成设备部署、工程施工和系统调试。
-                        </p>
-                    </article>
-
-                    <article class="reveal">
-                        <span>05</span>
-                        <h3>验收交付</h3>
-                        <p>
-                            完成测试、资料整理和项目验收。
-                        </p>
-                    </article>
-
-                    <article class="reveal">
-                        <span>06</span>
-                        <h3>持续维护</h3>
-                        <p>
-                            提供故障处理、巡检和技术支持。
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 联系行动区域 -->
-        <section class="case-contact-section">
-
-            <div class="container case-contact-box reveal">
+              <div class="dashboard-progress">
 
                 <div>
+                  <span>需求分析</span>
 
-                    <span class="section-label section-label-light">
-                        START YOUR PROJECT
-                    </span>
-
-                    <h2>
-                        您也有类似的项目需求？
-                    </h2>
-
-                    <p>
-                        告诉我们您的业务场景、办公地点和建设需求，
-                        获取适合的通信与数字化方案。
-                    </p>
-
+                  <i>
+                    <b style="width: 96%;"></b>
+                  </i>
                 </div>
 
+                <div>
+                  <span>方案设计</span>
 
-                <div class="case-contact-actions">
-
-                    <a
-                        class="button case-white-button"
-                        href="index.html#contact"
-                    >
-                        联系项目顾问
-                    </a>
-
-                    <a
-                        class="case-phone"
-                        href="tel:13823162880"
-                    >
-                        <small>联系电话</small>
-                        <strong>138 2316 2880</strong>
-                    </a>
-
+                  <i>
+                    <b style="width: 90%;"></b>
+                  </i>
                 </div>
 
-            </div>
+                <div>
+                  <span>实施交付</span>
 
-        </section>
+                  <i>
+                    <b style="width: 86%;"></b>
+                  </i>
+                </div>
 
-    </main>
+                <div>
+                  <span>运维支持</span>
 
+                  <i>
+                    <b style="width: 92%;"></b>
+                  </i>
+                </div>
 
-    <!-- 页脚 -->
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <a
-                    class="brand footer-logo"
-                    href="index.html"
-                >
-                    <span class="brand-mark">O</span>
-
-                    <span class="brand-text">
-                        <strong>奥斯达通信</strong>
-                        <small>OSTAR TELECOM</small>
-                    </span>
-                </a>
-
-                <p>
-                    持续技术创新，为企业提供稳定、
-                    专业的通信网络与数字化服务。
-                </p>
+              </div>
 
             </div>
 
+            <div class="case-dashboard-footer">
 
-            <div class="footer-column">
+              <div>
+                <strong>
+                  网络建设
+                </strong>
 
-                <h3>网站导航</h3>
+                <span>
+                  企业连接
+                </span>
+              </div>
 
-                <a href="index.html">网站首页</a>
-                <a href="index.html#about">关于我们</a>
-                <a href="cases.html">客户案例</a>
+              <div>
+                <strong>
+                  通信工程
+                </strong>
 
-            </div>
+                <span>
+                  现场实施
+                </span>
+              </div>
 
+              <div>
+                <strong>
+                  系统集成
+                </strong>
 
-            <div class="footer-column">
-
-                <h3>服务项目</h3>
-
-                <a href="index.html#services">业务中心</a>
-                <a href="index.html#services">工程中心</a>
-                <a href="index.html#solutions">行业解决方案</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>联系我们</h3>
-
-                <a href="tel:13823162880">
-                    138 2316 2880
-                </a>
-
-                <a href="mailto:sherry9988@139.com">
-                    sherry9988@139.com
-                </a>
+                <span>
+                  平台建设
+                </span>
+              </div>
 
             </div>
+
+          </div>
 
         </div>
 
+      </div>
+    </section>
 
-        <div class="container footer-bottom">
+    <!-- 项目服务能力 -->
+    <section class="case-data-section">
+
+      <div class="container case-data-grid">
+
+        <div>
+          <strong>
+            需求分析
+          </strong>
+
+          <span>
+            了解企业业务与使用场景
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            方案规划
+          </strong>
+
+          <span>
+            制定适合的技术实施方案
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            项目交付
+          </strong>
+
+          <span>
+            完成建设、调试和验收
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            持续维护
+          </strong>
+
+          <span>
+            提供后期技术支持服务
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 典型项目案例 -->
+    <section
+      class="section case-list-section"
+      id="caseList"
+    >
+      <div class="container">
+
+        <div class="case-section-heading reveal">
+
+          <div>
+
+            <span class="section-label">
+              PROJECT CASES
+            </span>
+
+            <h2>
+              典型项目服务场景
+            </h2>
+
+          </div>
+
+          <p>
+            根据企业所在行业、办公环境和业务规模，
+            提供不同类型的网络、通信和数字化解决方案。
+          </p>
+
+        </div>
+
+        <div class="modern-case-grid">
+
+          <!-- 案例一 -->
+          <article class="modern-case-card reveal">
+
+            <div class="modern-case-image case-image-network">
+
+              <span class="case-category">
+                企业网络
+              </span>
+
+              <div
+                class="network-graphic"
+                aria-hidden="true"
+              >
+
+                <div class="network-center">
+                  HQ
+                </div>
+
+                <div class="network-point point-one">
+                  01
+                </div>
+
+                <div class="network-point point-two">
+                  02
+                </div>
+
+                <div class="network-point point-three">
+                  03
+                </div>
+
+                <span class="network-line line-one"></span>
+                <span class="network-line line-two"></span>
+                <span class="network-line line-three"></span>
+
+              </div>
+
+            </div>
+
+            <div class="modern-case-content">
+
+              <span class="case-number">
+                CASE 01
+              </span>
+
+              <h3>
+                企业总部与分支机构网络建设
+              </h3>
+
+              <p>
+                针对企业总部与多个分支机构之间的通信需求，
+                通过互联网专线、SD-WAN及企业网络服务，
+                建立稳定、高效的跨地域连接。
+              </p>
+
+              <div class="case-tags">
+                <span>SD-WAN</span>
+                <span>企业专线</span>
+                <span>跨地域连接</span>
+              </div>
+
+              <a
+                class="case-detail-link"
+                href="#caseOne"
+              >
+                查看项目详情
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- 案例二 -->
+          <article class="modern-case-card reveal">
+
+            <div class="modern-case-image case-image-building">
+
+              <span class="case-category">
+                通信工程
+              </span>
+
+              <div
+                class="building-graphic"
+                aria-hidden="true"
+              >
+
+                <span class="signal-circle signal-one"></span>
+                <span class="signal-circle signal-two"></span>
+                <span class="signal-circle signal-three"></span>
+
+                <div class="building-main">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="modern-case-content">
+
+              <span class="case-number">
+                CASE 02
+              </span>
+
+              <h3>
+                商业楼宇通信覆盖工程
+              </h3>
+
+              <p>
+                面向商业楼宇、地下空间、电梯和公共区域，
+                通过现场勘察、工程设计和系统施工，
+                改善室内通信信号覆盖效果。
+              </p>
+
+              <div class="case-tags">
+                <span>室内覆盖</span>
+                <span>通信工程</span>
+                <span>现场实施</span>
+              </div>
+
+              <a
+                class="case-detail-link"
+                href="#caseTwo"
+              >
+                查看项目详情
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- 案例三 -->
+          <article class="modern-case-card reveal">
+
+            <div class="modern-case-image case-image-platform">
+
+              <span class="case-category">
+                系统集成
+              </span>
+
+              <div
+                class="platform-graphic"
+                aria-hidden="true"
+              >
+
+                <div class="platform-window">
+
+                  <div class="platform-top">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+
+                  <div class="platform-content">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <b></b>
+                    <b></b>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="modern-case-content">
+
+              <span class="case-number">
+                CASE 03
+              </span>
+
+              <h3>
+                企业数字化平台系统集成
+              </h3>
+
+              <p>
+                整合企业网络、硬件设备、管理软件和业务平台，
+                减少信息分散问题，提升企业日常管理和运营效率。
+              </p>
+
+              <div class="case-tags">
+                <span>系统集成</span>
+                <span>管理平台</span>
+                <span>数字化建设</span>
+              </div>
+
+              <a
+                class="case-detail-link"
+                href="#caseThree"
+              >
+                查看项目详情
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 案例一详情 -->
+    <section
+      class="section case-detail-section"
+      id="caseOne"
+    >
+      <div class="container case-detail-layout">
+
+        <div class="case-detail-heading reveal">
+
+          <div class="case-detail-number">
+            01
+          </div>
+
+          <span class="section-label">
+            ENTERPRISE NETWORK
+          </span>
+
+          <h2>
+            企业总部与分支机构网络建设
+          </h2>
+
+          <p>
+            适用于拥有多个办公地点、门店、园区或业务节点的企业。
+          </p>
+
+        </div>
+
+        <div class="case-detail-content reveal">
+
+          <article>
+
+            <span>
+              项目需求
+            </span>
+
+            <h3>
+              多个办公地点之间连接不稳定
+            </h3>
 
             <p>
-                ©
-                <span id="currentYear">2026</span>
-                深圳市奥斯达通信有限公司 版权所有
+              企业总部与各分支机构之间需要传输业务数据、
+              访问内部系统并进行日常协作，
+              原有网络存在延迟高、线路管理复杂等问题。
             </p>
 
-            <a href="#">
-                返回顶部
-            </a>
+          </article>
+
+          <article>
+
+            <span>
+              解决方案
+            </span>
+
+            <h3>
+              建设统一的企业网络连接体系
+            </h3>
+
+            <p>
+              根据企业业务位置和网络使用情况，
+              组合互联网专线、SD-WAN和安全访问服务，
+              实现总部与分支机构之间的统一连接。
+            </p>
+
+          </article>
+
+          <article>
+
+            <span>
+              项目价值
+            </span>
+
+            <h3>
+              提升网络稳定性和管理效率
+            </h3>
+
+            <p>
+              改善企业不同办公地点之间的数据访问体验，
+              降低线路管理难度，为业务持续运营提供支持。
+            </p>
+
+          </article>
 
         </div>
 
-    </footer>
+      </div>
+    </section>
 
+    <!-- 案例二详情 -->
+    <section
+      class="section case-detail-section case-detail-light"
+      id="caseTwo"
+    >
+      <div class="container case-detail-layout">
 
-    <script
-        src="js/main.js"
-        defer
-    ></script>
+        <div class="case-detail-heading reveal">
+
+          <div class="case-detail-number">
+            02
+          </div>
+
+          <span class="section-label">
+            COMMUNICATION ENGINEERING
+          </span>
+
+          <h2>
+            商业楼宇通信覆盖工程
+          </h2>
+
+          <p>
+            适用于商业中心、写字楼、地下室、电梯和园区等环境。
+          </p>
+
+        </div>
+
+        <div class="case-detail-content reveal">
+
+          <article>
+
+            <span>
+              项目需求
+            </span>
+
+            <h3>
+              室内部分区域通信信号较弱
+            </h3>
+
+            <p>
+              受到建筑结构、楼层高度和地下空间等因素影响，
+              部分区域可能存在信号覆盖不足或通信体验不稳定的问题。
+            </p>
+
+          </article>
+
+          <article>
+
+            <span>
+              解决方案
+            </span>
+
+            <h3>
+              完成现场勘察与覆盖设计
+            </h3>
+
+            <p>
+              对建筑内部环境和使用需求进行分析，
+              制定通信覆盖方案，完成设备安装、线路施工和系统调试。
+            </p>
+
+          </article>
+
+          <article>
+
+            <span>
+              项目价值
+            </span>
+
+            <h3>
+              改善重点区域通信使用体验
+            </h3>
+
+            <p>
+              提升地下空间、电梯、商业区和办公区域的通信质量，
+              为人员办公和商业运营提供稳定支持。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 案例三详情 -->
+    <section
+      class="section case-detail-section"
+      id="caseThree"
+    >
+      <div class="container case-detail-layout">
+
+        <div class="case-detail-heading reveal">
+
+          <div class="case-detail-number">
+            03
+          </div>
+
+          <span class="section-label">
+            SYSTEM INTEGRATION
+          </span>
+
+          <h2>
+            企业数字化平台系统集成
+          </h2>
+
+          <p>
+            适用于需要整合网络、硬件、软件和管理系统的企业。
+          </p>
+
+        </div>
+
+        <div class="case-detail-content reveal">
+
+          <article>
+
+            <span>
+              项目需求
+            </span>
+
+            <h3>
+              企业系统和业务数据较为分散
+            </h3>
+
+            <p>
+              不同部门使用独立软件和设备，
+              数据难以统一管理，信息传递和内部协作效率受到影响。
+            </p>
+
+          </article>
+
+          <article>
+
+            <span>
+              解决方案
+            </span>
+
+            <h3>
+              整合网络、设备和业务平台
+            </h3>
+
+            <p>
+              根据企业管理需求规划平台结构，
+              将网络、硬件设备、软件系统和业务数据进行统一连接。
+            </p>
+
+          </article>
+
+          <article>
+
+            <span>
+              项目价值
+            </span>
+
+            <h3>
+              提高企业信息管理和运营效率
+            </h3>
+
+            <p>
+              减少重复操作和数据分散问题，
+              帮助管理人员更加及时地了解业务运行情况。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 项目服务流程 -->
+    <section class="section case-process-section">
+
+      <div class="container">
+
+        <div class="case-section-heading reveal">
+
+          <div>
+
+            <span class="section-label">
+              SERVICE PROCESS
+            </span>
+
+            <h2>
+              项目服务流程
+            </h2>
+
+          </div>
+
+          <p>
+            从需求沟通到项目维护，
+            为企业提供清晰、规范的项目服务过程。
+          </p>
+
+        </div>
+
+        <div class="case-process-grid">
+
+          <article class="reveal">
+
+            <span>
+              01
+            </span>
+
+            <h3>
+              需求沟通
+            </h3>
+
+            <p>
+              了解企业业务、使用环境和项目目标。
+            </p>
+
+          </article>
+
+          <article class="reveal">
+
+            <span>
+              02
+            </span>
+
+            <h3>
+              现场勘察
+            </h3>
+
+            <p>
+              分析网络、设备和现场建设条件。
+            </p>
+
+          </article>
+
+          <article class="reveal">
+
+            <span>
+              03
+            </span>
+
+            <h3>
+              方案设计
+            </h3>
+
+            <p>
+              制定技术方案、建设计划和实施步骤。
+            </p>
+
+          </article>
+
+          <article class="reveal">
+
+            <span>
+              04
+            </span>
+
+            <h3>
+              项目实施
+            </h3>
+
+            <p>
+              完成设备部署、工程施工和系统调试。
+            </p>
+
+          </article>
+
+          <article class="reveal">
+
+            <span>
+              05
+            </span>
+
+            <h3>
+              验收交付
+            </h3>
+
+            <p>
+              完成测试、资料整理和项目验收。
+            </p>
+
+          </article>
+
+          <article class="reveal">
+
+            <span>
+              06
+            </span>
+
+            <h3>
+              持续维护
+            </h3>
+
+            <p>
+              提供故障处理、巡检和技术支持。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 联系项目顾问 -->
+    <section class="case-contact-section">
+
+      <div class="container">
+
+        <div class="case-contact-box reveal">
+
+          <div>
+
+            <span class="section-label section-label-light">
+              START YOUR PROJECT
+            </span>
+
+            <h2>
+              您也有类似的项目需求？
+            </h2>
+
+            <p>
+              告诉我们您的业务场景、办公地点和建设需求，
+              获取适合的通信与数字化方案。
+            </p>
+
+          </div>
+
+          <div class="case-contact-actions">
+
+            <a
+              class="button case-white-button"
+              href="index.html#contact"
+            >
+              联系项目顾问
+              <span>→</span>
+            </a>
+
+            <a
+              class="case-phone"
+              href="tel:13823162880"
+            >
+
+              <small>
+                联系电话
+              </small>
+
+              <strong>
+                138 2316 2880
+              </strong>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 网站底部 -->
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <!-- 底部新 Logo -->
+        <a
+          class="footer-logo"
+          href="index.html"
+          aria-label="返回奥斯达通信首页"
+        >
+          <img
+            class="footer-logo-image"
+            src="images/ostar-logo-web.jpg"
+            alt="奥斯达通信 Ostar Telecom"
+          >
+        </a>
+
+        <p>
+          持续技术创新，为企业提供稳定、
+          专业的通信网络与数字化服务。
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          网站导航
+        </h3>
+
+        <a href="index.html">
+          网站首页
+        </a>
+
+        <a href="about.html">
+          关于我们
+        </a>
+
+        <a href="cases.html">
+          客户案例
+        </a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          服务项目
+        </h3>
+
+        <a href="index.html#services">
+          业务中心
+        </a>
+
+        <a href="index.html#services">
+          工程中心
+        </a>
+
+        <a href="index.html#cases">
+          行业解决方案
+        </a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>
+          联系我们
+        </h3>
+
+        <a href="tel:13823162880">
+          138 2316 2880
+        </a>
+
+        <a href="mailto:sherry9988@139.com">
+          sherry9988@139.com
+        </a>
+
+        <a href="index.html#contact">
+          联系项目顾问
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <span>
+        粤ICP备2024274865号-1
+      </span>
+
+      <span>
+        版权所有 2004–<span id="year"></span>
+        深圳市奥斯达通信有限公司
+      </span>
+
+    </div>
+
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button
+    class="back-top"
+    id="backTop"
+    type="button"
+    aria-label="返回顶部"
+  >
+    ↑
+  </button>
+
+  <script src="js/main.js"></script>
 
 </body>
-
 </html>
